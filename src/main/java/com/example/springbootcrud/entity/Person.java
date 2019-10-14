@@ -1,26 +1,29 @@
 package com.example.springbootcrud.entity;
 
-import javax.persistence.*;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+//import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
-@Entity
-@NamedQuery(name = "Person.findByNameNQ",query = "select p from Person p where p.name = ?1")
+//@NamedQuery(name = "Person.findByNameNQ",query = "select p from Person p where p.name = ?1")
+@Document(collection = "person")
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
 
     @NotBlank
     private String name;
 
-    @Column(unique = true)
+    @Indexed(unique = true)
     private String email;
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 

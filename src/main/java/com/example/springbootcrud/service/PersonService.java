@@ -15,5 +15,5 @@ public interface PersonService {
     public Page<Person> findAll(Pageable pageable);
     public void delete(Person person);
     public Person save(Person person);
-    public List<Person> findByNameNQ(String name);
+//    public List<Person> findByNameNQ(String name);
 }

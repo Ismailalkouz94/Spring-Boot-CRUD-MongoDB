@@ -32,7 +32,7 @@ public class SpringBootCrudApplicationTests {
     @Autowired
     private PersonService personService;
 
-    @Before
+//    @Before
     @Test
     public void create_usingHTTPRequest() {
         logger.info("------------------------- create_usingHTTPRequest ---------------------------------");
@@ -123,12 +123,12 @@ public class SpringBootCrudApplicationTests {
         logger.info("------------------------- findAll ---------------------------------");
     }
 
-    @Test
-    public void findByName_namedQuery() {
-        logger.info("------------------------- findByName_namedQuery ---------------------------------");
-        personService.findByNameNQ("ismail").forEach(x -> logger.info(x));
-        logger.info("------------------------- findByName_namedQuery ---------------------------------");
-    }
+//    @Test
+//    public void findByName_namedQuery() {
+//        logger.info("------------------------- findByName_namedQuery ---------------------------------");
+//        personService.findByNameNQ("ismail").forEach(x -> logger.info(x));
+//        logger.info("------------------------- findByName_namedQuery ---------------------------------");
+//    }
 
     @Test
     public void findAll_HTTP_JSON() {

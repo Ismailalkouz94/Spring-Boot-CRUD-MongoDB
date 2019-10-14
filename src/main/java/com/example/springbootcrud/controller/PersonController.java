@@ -5,6 +5,7 @@ import com.example.springbootcrud.service.PersonService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,7 +34,7 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/update", method = RequestMethod.POST)
-    public Person update(@RequestParam(value = "id") Long id, @RequestParam(value = "name") String name, @RequestParam(value = "email") String email) {
+    public Person update(@RequestParam(value = "id") String id, @RequestParam(value = "name") String name, @RequestParam(value = "email") String email) {
 
         Person person = new Person();
         person.setId(id);
@@ -44,7 +45,7 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public String delete(@RequestParam(value = "id") Long id) {
+    public String delete(@RequestParam(value = "id") String id) {
 
         Person person = new Person();
         person.setId(id);

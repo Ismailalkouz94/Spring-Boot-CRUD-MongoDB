@@ -61,8 +61,8 @@ public class PersonServiceImpl implements PersonService {
         return personDAO.save(person);
     }
 
-    @Override
-    public List<Person> findByNameNQ(String name) {
-        return personDAO.findByNameNQ(name);
-    }
+//    @Override
+//    public List<Person> findByNameNQ(String name) {
+//        return personDAO.findByNameNQ(name);
+//    }
 }

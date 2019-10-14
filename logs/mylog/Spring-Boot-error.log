@@ -1,0 +1,16 @@
+2019-05-13T10:44:30,193 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T10:44:30,193 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T11:02:41,010 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T11:02:41,010 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T11:10:25,410 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T11:10:25,410 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T11:38:56,116 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T11:38:56,116 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T11:42:56,905 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T11:42:56,906 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T12:14:46,346 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T12:14:46,346 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T12:33:07,431 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T12:33:07,431 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
+2019-05-13T12:58:46,106 ERROR [Sample][main|SpringBootCrudApplication] 20 main Oops! We have an Error. OK
+2019-05-13T12:58:46,106 FATAL [Sample][main|SpringBootCrudApplication] 21 main Damn! Fatal error. Please fix me.
