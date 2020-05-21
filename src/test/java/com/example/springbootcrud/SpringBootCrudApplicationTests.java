@@ -1,7 +1,9 @@
 package com.example.springbootcrud;
 
+import com.example.springbootcrud.entity.Company;
 import com.example.springbootcrud.entity.Person;
 import com.example.springbootcrud.exception.CustomException;
+import com.example.springbootcrud.service.CompanyService;
 import com.example.springbootcrud.service.PersonService;
 import com.example.springbootcrud.util.Constants;
 import com.google.gson.Gson;
@@ -21,6 +23,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -31,6 +34,8 @@ public class SpringBootCrudApplicationTests {
 
     @Autowired
     private PersonService personService;
+    @Autowired
+    private CompanyService companyService;
 
 //    @Before
     @Test
@@ -155,5 +160,35 @@ public class SpringBootCrudApplicationTests {
             throw new CustomException(e.getMessage());
         }
     }
+
+
+    @Test
+    public void addCompany(){
+        logger.info("------------------------- addCompany ---------------------------------");
+
+        List<Person> personList=new ArrayList<>();
+        personList.add(new Person("ismail","ismail1@gmail.com"));
+        Company company=new Company("IK",personList );
+        companyService.add(company);
+        logger.info("------------------------- addCompany ---------------------------------");
+
+    }
+
+    @Test
+    public void findAllCompany(){
+        logger.info("------------------------- findAllCompany ---------------------------------");
+        companyService.find().forEach(System.out::println);
+        logger.info("------------------------- findAllCompany ---------------------------------");
+
+    }
+
+    @Test
+    public void findCompanyByName(){
+        logger.info("------------------------- findCompanyByName ---------------------------------");
+        System.out.println(companyService.findByName("IK"));
+        logger.info("------------------------- findCompanyByName ---------------------------------");
+
+    }
+
 
 }

@@ -4,28 +4,23 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-//import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import java.util.List;
 
-//@NamedQuery(name = "Person.findByNameNQ",query = "select p from Person p where p.name = ?1")
-@Document(collection = "person")
-public class Person {
+@Document(collection = "company")
+public class Company {
     @Id
     private String id;
 
     @NotBlank
+    @Indexed(unique = true)
     private String name;
 
-    @Indexed(unique = true)
-    private String email;
+    private List<Person> person;
 
-    public Person() {
-    }
-
-
-    public Person( @NotBlank String name, String email) {
+    public Company( @NotBlank String name, List<Person> person) {
         this.name = name;
-        this.email = email;
+        this.person = person;
     }
 
     public String getId() {
@@ -44,20 +39,20 @@ public class Person {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public List<Person> getPerson() {
+        return person;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setPerson(List<Person> person) {
+        this.person = person;
     }
 
     @Override
     public String toString() {
-        return "Person{" +
-                "id=" + id +
+        return "Company{" +
+                "aLong=" + id +
                 ", name='" + name + '\'' +
-                ", email='" + email + '\'' +
+                ", person=" + person +
                 '}';
     }
 }
